@@ -55,7 +55,7 @@ else
 fi
 
 if [ "${ENABLE_BEPINEX}" == "true" ]; then
-    export  WINEDLLOVERRIDES="winhttp=n,b"
+    export  WINEDLLOVERRIDES="winhttp=n,b;winmm=n,b"
     BEPINEX_VR_TS_URL=https://v-rising.thunderstore.io/package/BepInEx/BepInExPack_V_Rising/
     echo "---BepInEx for V Rising enabled!---"
     CUR_V="$(find ${SERVER_DIR} -maxdepth 1 -name "BepInEx-*" | cut -d '-' -f2)"
